@@ -11,7 +11,6 @@ Video Coming soon...
   - [Requirements](#requirements)
   - [Quickstart](#quickstart)
   - [Typescript](#typescript)
-  - [Not active yet](#not-active-yet)
     - [Optional Gitpod](#optional-gitpod)
 - [Usage](#usage)
   - [Testing](#testing)
@@ -49,8 +48,6 @@ yarn
 ## Typescript
 
 For the typescript edition, run:
-
-## Not active yet
 
 ```
 git checkout typescript
