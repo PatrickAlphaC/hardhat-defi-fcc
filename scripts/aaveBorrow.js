@@ -76,8 +76,11 @@ async function getLendingPool(account) {
 }
 
 async function getBorrowUserData(lendingPool, account) {
-    const { totalCollateralETH, totalDebtETH, availableBorrowsETH } =
-        await lendingPool.getUserAccountData(account)
+    const {
+        totalCollateralETH,
+        totalDebtETH,
+        availableBorrowsETH
+    } = await lendingPool.getUserAccountData(account)
     console.log(`You have ${totalCollateralETH} worth of ETH deposited.`)
     console.log(`You have ${totalDebtETH} worth of ETH borrowed.`)
     console.log(`You can borrow ${availableBorrowsETH} worth of ETH.`)
@@ -86,7 +89,7 @@ async function getBorrowUserData(lendingPool, account) {
 
 main()
     .then(() => process.exit(0))
-    .catch((error) => {
+    .catch(error => {
         console.error(error)
         process.exit(1)
     })
