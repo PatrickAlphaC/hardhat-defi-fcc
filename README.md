@@ -43,6 +43,7 @@ Video coming soon...
 git clone https://github.com/PatrickAlphaC/hardhat-defi-fcc
 cd hardhat-defi-fcc
 yarn
+yarn typechain
 ```
 
 ## Typescript
