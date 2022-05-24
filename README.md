@@ -70,7 +70,7 @@ All you'll need, is to set a `MAINNET_RPC_URL` environment variable in a `.env` 
 Run:
 
 ```
-yarn hardhat run scripts/aaveBorrow.js
+yarn hardhat run scripts/aaveBorrow.ts
 ```
 
 ## Testing

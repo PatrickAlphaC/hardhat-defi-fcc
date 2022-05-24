@@ -19,7 +19,7 @@ async function main() {
     let borrowReturnData = await getBorrowUserData(lendingPool, deployer)
     let availableBorrowsETH = borrowReturnData[0]
     const daiPrice = await getDaiPrice()
-    const amountDaiToBorrow = availableBorrowsETH.mul("0.95").mul(1 / daiPrice.toNumber())
+    const amountDaiToBorrow = availableBorrowsETH.div(daiPrice)
     const amountDaiToBorrowWei = ethers.utils.parseEther(amountDaiToBorrow.toString())
     console.log(`You can borrow ${amountDaiToBorrow.toString()} DAI`)
     await borrowDai(
