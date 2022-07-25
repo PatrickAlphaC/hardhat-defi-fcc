@@ -16,6 +16,7 @@ async function getWeth() {
     await txResponse.wait(1)
     const wethBalance = await iWeth.balanceOf(deployer)
     console.log(`Got ${wethBalance.toString()} WETH`)
+    return wethBalance
 }
 
 module.exports = { getWeth, AMOUNT }

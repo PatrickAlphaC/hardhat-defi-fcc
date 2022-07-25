@@ -1,16 +1,15 @@
 const { ethers, getNamedAccounts, network } = require("hardhat")
-const { BigNumber } = require("@ethersproject/bignumber")
-const { getWeth, AMOUNT } = require("../scripts/getWeth.js")
+const { getWeth } = require("../scripts/getWeth.js")
 const { networkConfig } = require("../helper-hardhat-config")
 
 async function main() {
-    await getWeth()
+    const amount = await getWeth()
     const { deployer } = await getNamedAccounts()
     const lendingPool = await getLendingPool(deployer)
     const wethTokenAddress = networkConfig[network.config.chainId].wethToken
-    await approveErc20(wethTokenAddress, lendingPool.address, AMOUNT, deployer)
+    await approveErc20(wethTokenAddress, lendingPool.address, amount, deployer)
     console.log("Depositing WETH...")
-    await lendingPool.deposit(wethTokenAddress, AMOUNT, deployer, 0)
+    await lendingPool.deposit(wethTokenAddress, amount, deployer, 0)
     console.log("Desposited!")
     // Getting your borrowing stats
     let { availableBorrowsETH, totalDebtETH } = await getBorrowUserData(lendingPool, deployer)
