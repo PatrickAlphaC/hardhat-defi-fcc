@@ -9,9 +9,9 @@ interface IERC20 {
 
   function decimals() external view returns (uint8 decimalPlaces);
 
-  function decreaseApproval(address spender, uint256 addedValue) external returns (bool success);
+  function decreaseApproval(address spender, uint256 subtractedValue) external returns (bool success);
 
-  function increaseApproval(address spender, uint256 subtractedValue) external;
+  function increaseApproval(address spender, uint256 addedValue) external returns (bool success);
 
   function name() external view returns (string memory tokenName);
 
