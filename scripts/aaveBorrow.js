@@ -1,5 +1,4 @@
 const { ethers, getNamedAccounts, network } = require("hardhat")
-const { BigNumber } = require("@ethersproject/bignumber")
 const { getWeth, AMOUNT } = require("../scripts/getWeth.js")
 const { networkConfig } = require("../helper-hardhat-config")
 
