@@ -11,8 +11,8 @@ const networkConfig = {
         name: "goerli",
         ethUsdPriceFeed: "0xD4a33860578De61DBAbDc8BFdb98FD742fA7028e",
         wethToken: "0xB4FBF271143F4FBf7B91A5ded31805e42b2208d6",
-        // This is the AaveV3 contract address
-        lendingPoolAddressesProvider: "0xc4dCB5126a3AfEd129BC3668Ea19285A9f56D15D",
+        // This is the AaveV2 Lending Pool Addresses Provider
+        lendingPoolAddressesProvider: "0x5E52dEc931FFb32f609681B8438A51c675cc232d",
         // This is LINK/ETH feed
         daiEthPriceFeed: "0xb4c4a493AB6356497713A78FFA6c60FB53517c63",
         // This is the LINK token
