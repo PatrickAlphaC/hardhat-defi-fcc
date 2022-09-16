@@ -16,8 +16,8 @@ import { HardhatUserConfig } from "hardhat/config"
  */
 
 const COINMARKETCAP_API_KEY = process.env.COINMARKETCAP_API_KEY || ""
-const KOVAN_RPC_URL =
-  process.env.KOVAN_RPC_URL ||
+const GOERLI_RPC_URL =
+  process.env.GOERLI_RPC_URL ||
   "https://eth-mainnet.alchemyapi.io/v2/your-api-key"
 const PRIVATE_KEY =
   process.env.PRIVATE_KEY ||
@@ -35,10 +35,10 @@ const config: HardhatUserConfig = {
           url: MAINNET_RPC_URL
       }
     },
-    kovan: {
-      url: KOVAN_RPC_URL,
+    goerli: {
+      url: GOERLI_RPC_URL,
       accounts: [PRIVATE_KEY],
-      chainId: 42,
+      chainId: 5,
     },
   },
   solidity: {

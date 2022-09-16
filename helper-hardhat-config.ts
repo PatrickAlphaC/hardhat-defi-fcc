@@ -21,8 +21,17 @@ export const networkConfig: networkConfigInfo = {
         daiEthPriceFeed: "0x773616E4d11A78F511299002da57A0a94577F1f4",
         daiToken: "0x6b175474e89094c44da98b954eedeac495271d0f"
     },
-    // Price Feed Address, values can be obtained at https://docs.chain.link/docs/reference-contracts
-    // Default one is ETH/USD contract on Kovan
+    // goerli might not work here, so we've left the kovan addresses up as a reference
+    5: {
+      name: "goerli",
+      ethUsdPriceFeed: "0xD4a33860578De61DBAbDc8BFdb98FD742fA7028e",
+      wethToken: "0x8B7FB00ABb67ba04CE894B9E2769fe24A8409a6a",
+      lendingPoolAddressesProvider: "0xc4dCB5126a3AfEd129BC3668Ea19285A9f56D15D",
+      // DAI / ETH doesn't exist on goerli, so we're using LINK / ETH
+      daiEthPriceFeed: "0xb4c4a493AB6356497713A78FFA6c60FB53517c63",
+      // For this... we are just going to use LINK
+      daiToken: "0x326C977E6efc84E512bB9C30f76E30c160eD06FB"
+   },
     42: {
         name: "kovan",
         ethUsdPriceFeed: "0x9326BFA02ADD2366b30bacB125260Af641031331",
