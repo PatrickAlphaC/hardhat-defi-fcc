@@ -2,7 +2,7 @@
 
 This is a section of the Javascript Blockchain/Smart Contract FreeCodeCamp Course.
 
-Video Coming soon...
+*This repo has been updated to work with Goerli over Rinkeby*
 
 [Full Repo](https://github.com/smartcontractkit/full-blockchain-solidity-course-js)
 
