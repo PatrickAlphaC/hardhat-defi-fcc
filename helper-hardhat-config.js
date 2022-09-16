@@ -10,7 +10,7 @@ const networkConfig = {
     5: {
         name: "goerli",
         ethUsdPriceFeed: "0xD4a33860578De61DBAbDc8BFdb98FD742fA7028e",
-        wethToken: "0x8B7FB00ABb67ba04CE894B9E2769fe24A8409a6a",
+        wethToken: "0xB4FBF271143F4FBf7B91A5ded31805e42b2208d6",
         // This is the AaveV3 contract address
         lendingPoolAddressesProvider: "0xc4dCB5126a3AfEd129BC3668Ea19285A9f56D15D",
         // This is LINK/ETH feed
