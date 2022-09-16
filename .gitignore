@@ -1,6 +1,7 @@
 .encryptedKey.json
 # vscode
 .vscode
+typechain-types
 
 # hardhat
 artifacts
