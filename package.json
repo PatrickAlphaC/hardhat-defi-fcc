@@ -1,5 +1,5 @@
 {
-  "name": "hardhat-project",
+  "name": "hardhat-defi-fcc",
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "npm:hardhat-deploy-ethers@^0.3.0-beta.13",
     "@nomiclabs/hardhat-etherscan": "^3.0.0",
