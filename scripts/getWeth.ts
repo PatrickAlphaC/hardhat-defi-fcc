@@ -7,7 +7,6 @@ export const AMOUNT = (ethers.utils.parseEther("0.1")).toString()
 export async function getWeth() {
     const { deployer } = await getNamedAccounts()
     const iWeth = await ethers.getContractAt(
-        "IWeth",
         networkConfig[network.config!.chainId!].wethToken!,
         deployer
     )
