@@ -50,7 +50,7 @@ async function borrowDai(daiAddress, lendingPool, amountDaiToBorrow, account) {
 async function getDaiPrice() {
     const daiEthPriceFeed = await ethers.getContractAt(
         "AggregatorV3Interface",
-        networkConfig[network.config.chainId].daiUSDPriceFeed
+        networkConfig[network.config.chainId].daiUSDPriceFeed //update PriceFeed
     )
     const price = (await daiEthPriceFeed.latestRoundData())[1]
     console.log(`The DAI/USD price is ${price.toString()}`)
