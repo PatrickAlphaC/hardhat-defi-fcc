@@ -5,6 +5,7 @@ const networkConfig = {
         lendingPoolAddressesProvider: "0xB53C1a33016B2DC2fF3653530bfF1848a515c8c5",
         daiEthPriceFeed: "0x773616E4d11A78F511299002da57A0a94577F1f4",
         daiToken: "0x6b175474e89094c44da98b954eedeac495271d0f",
+        daiUSDPriceFeed: "0xAed0c38402a5d19df6E4c03F4E2DceD6e29c1ee9",
     },
     // Due to the changing testnets, this testnet might not work as shown in the video
     5: {
