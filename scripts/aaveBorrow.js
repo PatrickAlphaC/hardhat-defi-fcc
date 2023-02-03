@@ -14,7 +14,8 @@ async function main() {
     // Getting your borrowing stats
     let { availableBorrowsETH, totalDebtETH } = await getBorrowUserData(lendingPool, deployer)
     const daiPrice = await getDaiPrice()
-    const amountDaiToBorrow = availableBorrowsETH.toString() * 0.95 * (1 / daiPrice.toNumber())
+    // PriceFeed here should be DAI/USD, so that we can get amount dai to borrow
+    const amountDaiToBorrow = availableBorrowsETH.toString() * 0.95 * (1 / daiPrice.toNumber()) 
     const amountDaiToBorrowWei = ethers.utils.parseEther(amountDaiToBorrow.toString())
     console.log(`You can borrow ${amountDaiToBorrow.toString()} DAI`)
     await borrowDai(
@@ -49,10 +50,10 @@ async function borrowDai(daiAddress, lendingPool, amountDaiToBorrow, account) {
 async function getDaiPrice() {
     const daiEthPriceFeed = await ethers.getContractAt(
         "AggregatorV3Interface",
-        networkConfig[network.config.chainId].daiEthPriceFeed
+        networkConfig[network.config.chainId].daiUSDPriceFeed
     )
     const price = (await daiEthPriceFeed.latestRoundData())[1]
-    console.log(`The DAI/ETH price is ${price.toString()}`)
+    console.log(`The DAI/USD price is ${price.toString()}`)
     return price
 }
 
