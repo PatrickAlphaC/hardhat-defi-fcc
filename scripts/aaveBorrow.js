@@ -2,6 +2,8 @@ const { ethers, getNamedAccounts, network } = require("hardhat")
 const { getWeth, AMOUNT } = require("../scripts/getWeth.js")
 const { networkConfig } = require("../helper-hardhat-config")
 
+const BORROW_MODE = 2 // Variable borrow mode. Stable was disabled. 
+
 async function main() {
     await getWeth()
     const { deployer } = await getNamedAccounts()
@@ -35,13 +37,13 @@ async function main() {
 
 async function repay(amount, daiAddress, lendingPool, account) {
     await approveErc20(daiAddress, lendingPool.address, amount, account)
-    const repayTx = await lendingPool.repay(daiAddress, amount, 1, account)
+    const repayTx = await lendingPool.repay(daiAddress, amount, BORROW_MODE, account)
     await repayTx.wait(1)
     console.log("Repaid!")
 }
 
 async function borrowDai(daiAddress, lendingPool, amountDaiToBorrow, account) {
-    const borrowTx = await lendingPool.borrow(daiAddress, amountDaiToBorrow, 1, 0, account)
+    const borrowTx = await lendingPool.borrow(daiAddress, amountDaiToBorrow, BORROW_MODE, 0, account)
     await borrowTx.wait(1)
     console.log("You've borrowed!")
 }
