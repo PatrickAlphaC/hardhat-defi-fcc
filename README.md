@@ -1,3 +1,7 @@
+# Update: Head to Cyfrin Updraft
+
+> **ℹ️ Important:** This repo is no longer maintained; we invite all people learning Solidity to head to [Cyfrin Updraft](https://updraft.cyfrin.io/)! The 100% free #1 smart contract education platform on earth. 
+
 # Hardhat DeFi 
 
 *This repo has been revamped to work with Goerli. Due to AaveV2 not being deployed on Goerli, it may not work as intended. Please use a mainnet-fork or local network instead of a testnet.*
